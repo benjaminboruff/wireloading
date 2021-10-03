@@ -1,11 +1,11 @@
 ## wire:loading.class issue
 
-Something odd is happening when using `wire:loading` directive 
+Something odd is happening when using the `wire:loading` directive 
 with the `class` modifier. In this specific case, when
 used in a `@forelse` loop associated with a transaction search query in the `Dashboard` 
 livewire component, the `wire:loading.class="whatever"` directive in the blade view causes non-stop `syncInput` 
 requests to fire in the browser when additional input is typed *after* the initial
-search finds no records. 
+search finds no results. 
 
 For example (using my repo's simplified code based on Caleb's 
 screencast *Building Data Tables -> Basic Search*), quickly type 
@@ -18,7 +18,7 @@ To stop it you must backspace over the search string until some
 records are found. I've tried other `wire:loading` directives, but none
 but the `class` modifier seem to trigger this behavior.
 
-I think Caleb also ran into this issue in hte *Basic Search* video about time marker
+I think Caleb also ran into this issue in the *Basic Search* video about time marker
 *9:48* when he says "Oh, I have some loopty-dupe thing going on". If you look in
 the bottom left corner of his screen you will see the "Waiting for surge.test..." 
 messages flashing in the browser. That's when I think he hit the problem. I think
