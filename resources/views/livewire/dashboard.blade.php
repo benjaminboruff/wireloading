@@ -18,7 +18,7 @@
 
                 <tbody>
                 @forelse($transactions as $transaction)
-                    <tr wire:loading.class.delay="foobar">
+                    <tr wire:loading.class="">
                         <td> {{ $transaction->title }} </td>
                         <td> {{ $transaction->amount }} </td>
                         <td> {{ $transaction->status }} </td>
@@ -39,7 +39,7 @@
             </table>
 
             <div>
-                {{ $transactions->links() }}
+                {{--                {{ $transactions->links() }}--}}
             </div>
 
         </div>
