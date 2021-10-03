@@ -1,9 +1,9 @@
 ## wire:loading.class issue
 
 Something odd is happening when using `wire:loading` directive 
-when using the `class` modifier. In this specific case, when
+with the `class` modifier. In this specific case, when
 used in a `@forelse` loop associated with a transaction search query in the `Dashboard` 
-livewire component, the `wire:loading.class="whatever"` causes non-stop `syncInput` 
+livewire component, the `wire:loading.class="whatever"` directive in the blade view causes non-stop `syncInput` 
 requests to fire in the browser when additional input is typed *after* the initial
 search finds no records. 
 
@@ -27,3 +27,14 @@ of the video.
 
 I am using both Chrome and Firefox (latest) on linux, running laravel 8.62.0, php 8.0.11
 in Homestead 11.4.0, with livewire 2.6.7.
+
+So setup, copy the example .env file and add your DB stuff. 
+Then migrate with seed (this gives you 250 transactions from the factory).
+Then go to your site's `dashboard` route, and quickly type in a bunch of 
+gibberish. You should get `No transactions...` in the table. 
+
+Then type some
+additional characters and look at your browser's networking tab in the
+dev tools. You should see a barrage of `syncInput` requests.
+
+
