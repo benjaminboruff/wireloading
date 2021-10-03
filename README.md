@@ -26,7 +26,7 @@ refreshing, then not triggering it again, may have stopped the issue during the 
 of the video.
 
 I am using both Chrome and Firefox (latest) on linux, running laravel 8.62.0, php 8.0.11
-in Homestead 11.4.0, with livewire 2.6.7.
+in Homestead 11.4.0, with livewire 2.6.7, and alpine 3.x.x (loaded in layouts.base).
 
 So setup, copy the example .env file and add your DB stuff. 
 Then migrate with seed (this gives you 250 transactions from the factory).
