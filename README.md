@@ -10,7 +10,7 @@ search finds no results.
 For example (using my repo's simplified code based on Caleb's 
 screencast *Building Data Tables -> Basic Search*), quickly type 
 in a search string (*in this case, yourapp/dashboard*) that should produce 
-`No transactions...`. If you typed quickly enough, you should see the 
+`No transactions found...`. If you typed quickly enough, you should see the 
 round-trip in the networking tab. Then type one or more additional letters
 ... then *boom*, non-stop `syncInput` requests begin to fire.
 
@@ -31,7 +31,7 @@ in Homestead 11.4.0, with livewire 2.6.7.
 So setup, copy the example .env file and add your DB stuff. 
 Then migrate with seed (this gives you 250 transactions from the factory).
 Then go to your site's `dashboard` route, and quickly type in a bunch of 
-gibberish. You should get `No transactions...` in the table. 
+gibberish. You should get `No transactions found...` in the table. 
 
 Then type some
 additional characters and look at your browser's networking tab in the
